@@ -8,31 +8,31 @@ import json
 #Main Config:#
 botStatusType = 'Watching'                                                   #Bot Status Type (Ex. Playing, Watching, Listening, or Streaming)
 botStatusMessage = 'Tickets'                                                #The message that is shown on the bots activity
-guildID = 1270286318383009832                                           #ID of the Guild the the bot is running in
-ticketLogsChannelID = 1304864853995028551                                 #ID of the Channel to send system logs to
-ticketTranscriptChannelID = 1302264347699052584                      #ID of the Channel to send ticket transcripts to
+guildID = 1217800505934352485                                           #ID of the Guild the the bot is running in
+ticketLogsChannelID = 1300509835250634817                                 #ID of the Channel to send system logs to
+ticketTranscriptChannelID = 1300509835250634817                      #ID of the Channel to send ticket transcripts to
 databaseName = 'tickets.db'                                          #Leave set to default value unless if you want to use a different database name
 debugLogSendID = 1111560053334487131                                     #ID of the Bot Owner to send debug information to
 
 #Ticket Creation/Options Config:#
-IDOfChannelToSendTicketCreationEmbed = 1303641154226622564               #ID of the Channel to send the Create a ticket embed to
-IDofMessageForTicketCreation = 1305130815377768491                       #This variable was automatically adjusted.
-activeTicketsCategoryID = 1302710082714472449                      #ID of the active tickets category
-onHoldTicketsCategoryID = 1270286318383009833                             #ID of the onhold tickets category
-archivedTicketsCategoryID = 1270286318383009834                    #ID of the archived tickets category
+IDOfChannelToSendTicketCreationEmbed = 1299383770528481297    #ID of the Channel to send the Create a ticket embed to
+IDofMessageForTicketCreation = 1305177021978120353                       #This variable was automatically adjusted.
+activeTicketsCategoryID = 1299383727784333353                      #ID of the active tickets category
+onHoldTicketsCategoryID = 1299383735778545827                             #ID of the onhold tickets category
+archivedTicketsCategoryID = 1299383739285246055                    #ID of the archived tickets category
 
 OptionsDict = {
-    "Option 1": ("Sales 💲", "sales", "Create a sales related ticket."),                                      #This is the ticket options dictionary. It defines the different types of tickets that users can create.
+    "Option 1": ("Purchase 💲", "purchase", "Create a Purchase related ticket."),                                      #This is the ticket options dictionary. It defines the different types of tickets that users can create.
     "Option 2": ("Support ❓", "support", "Create a support related ticket."),                                #A ticket option definition should look something like this:  
-    "Option 3": ("Report ✋", "staff", "Create a ticket to speak with a member of staff.")                    #"Option #": ("Title of Option", "Type of Option", "Description of Option")
+    "Option 3": ("Sponsorship 💰", "sponsor", "Create a ticket to speak with Management team about sponsorship.")                    #"Option #": ("Title of Option", "Type of Option", "Description of Option")
 }                                                                                                             #Add a comma after every option definition except for the last one. 
                                                                                                               #If you only have one option then no comma is needed.
                                                                                                                  
 
 channelPerms = {                                                                                          #This is the ticket channel perms dictionary.
-    "sales": (1300878206349475860),                                                                     #This dictionary defines what roles will have access to each type of Ticket Channel
-    "support": (1300878206349475860 ),                                           #Each type can support multiple role IDS
-    "staff": (1300878206349475860)                                              #Each entry into the definition should look something like this:
+    "purchase": (1299393336934662206,1299390900362940480,),                                                                     #This dictionary defines what roles will have access to each type of Ticket Channel
+    "support": (1299393336934662206,1299390900362940480),                                           #Each type can support multiple role IDS
+    "sponsor": (1299393336934662206,1299390900362940480)                                              #Each entry into the definition should look something like this:
 }                                                                                                         #"Type of Option":(ROLEID1, ROLEID2)
                                                                                                           #Add a comma after every option definition except for the last one. 
                                                                                                           #If you only have one option then no comma is needed.

@@ -92,8 +92,36 @@ async def on_ready():
                 await tmessage.edit(view=embedButtons(timeout=None))
             else:
                 pass
-        embed = discord.Embed(title='''**Create a ticket**''', description=f'Press the button below to create a ticket!', color=embedColor)
-        embed.set_footer(text=f"{footerOfEmbeds} | {bot.user.id}", icon_url=f'{bot.user.display_avatar}')
+        embed = discord.Embed(
+            title="**🎟️ Create a Ticket**",
+            description="Press the button below to create a ticket!",
+            color=embedColor
+        )
+
+        embed.add_field(
+            name="**🌟 Elightnodes Ticket System**",
+            value=(
+                "Select one of the options below from the menu if you need help, want to buy Minecraft hosting, "
+                "or have any questions. **Only open a ticket if necessary.** Making tickets for fun or time-pass "
+                "may result in a **blacklist** from ticket creation.\n\n"
+                
+                "**🔹 RULES TO FOLLOW:**\n"
+                "• 🕰️ **Please be patient** — our staff will assist you soon.\n"
+                "• 📝 **Answering questions is mandatory.**\n"
+                "• 🙏 **Be respectful** to moderators. All conversations are recorded.\n\n"
+                
+                "**📅 Support Timings:**\n"
+                "• **Monday-Friday**: 3:30 PM to 1:00 AM\n"
+                "• **Saturday**: 8:00 AM to 8:00 PM\n"
+                "• **Sunday**: No Support\n"
+            ),
+            inline=False
+        )
+
+        embed.set_footer(
+            text=f"{footerOfEmbeds} | {bot.user.id}",
+            icon_url=f'{bot.user.display_avatar}'
+        )
         try:
             tchannel = bot.get_channel(IDOfChannelToSendTicketCreationEmbed)
             tmessage = await tchannel.fetch_message(IDofMessageForTicketCreation)
@@ -348,14 +376,14 @@ async def self(interaction:discord.Interaction):
     try:
         author = interaction.user
         guild = interaction.guild
-        embed6 = discord.Embed(title='Information', description=f'''Hi there! I'm **{bot.user.name}**, a discord ticket system bot designed by WebTheDev on GitHub!''', color=embedColor)
+        embed6 = discord.Embed(title='Information', description=f'''Hi there! I'm **{bot.user.name}**, a discord ticket system bot designed by BlackHawk''', color=embedColor)
         latency = bot.latency * 1000
         embed6.add_field(name="**__Latency__**", value=f"❤️: {latency:.2f}ms")
         botOwner = await bot.fetch_user(debugLogSendID)
         embed6.add_field(name="**__Bot Owner__**", value=f"{botOwner.mention}")
         embed6.add_field(name= "**__Version__**", value="`v4.3.6`")
-        embed6.add_field(name="**__Github Repository__**", value="[Click Me!](https://github.com/WebTheDev/TicketBot)")
-        botCreator = await bot.fetch_user(387002430602346499)
+        embed6.add_field(name="**__Github Repository__**", value="[Click Me!](https://github.com/BlackHawk616)")
+        botCreator = await bot.fetch_user(1111560053334487131)
         embed6.add_field(name="**__Bot Creator__**", value=f"{botCreator}")
         embed6.add_field(name="**__Status__**", value=f"Everything is good ✅")
         embed6.set_footer(text=f"{footerOfEmbeds} | {bot.user.id}", icon_url=f'{bot.user.display_avatar}')
